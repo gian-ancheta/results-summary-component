@@ -1,0 +1,272 @@
+/* Variables */
+
+/* General Colors */
+
+html {
+  --primary-color: linear-gradient(hsl(252, 100%, 63%), hsl(241, 81%, 54%));
+  --secondary-color: hsl(223, 30%, 27%);
+}
+
+/* Backgrounds */
+
+html {
+  --body-bg-color: hsl(220, 100%, 96%);
+
+  --performance-bg-color: hsl(0, 0%, 100%);
+
+  --overall-score-bg: linear-gradient(hsl(256, 71%, 46%), hsl(241, 71%, 46%, 0%));
+  
+  --summary-1-bg-color: hsl(0, 100%, 67%, 5%);
+  --summary-2-bg-color: hsl(39, 100%, 56%, 5%);
+  --summary-3-bg-color: hsl(166, 100%, 37%, 5%);
+  --summary-4-bg-color: hsl(234, 85%, 45%, 5%);
+}
+
+/* Text Colors */
+
+html {
+  --overall-text-color: hsl(241, 100%, 89%); 
+  --overall-text-accent-color: hsl(0, 0%, 100%);
+
+  --summary-label-1-text-color: hsl(0, 100%, 67%);
+  --summary-label-2-text-color: hsl(39, 100%, 56%);
+  --summary-label-3-text-color: hsl(166, 100%, 37%);
+  --summary-label-4-text-color: hsl(234, 85%, 45%);
+}
+
+/* Spacing */
+
+html {
+  --global-margin: 1.5rem;
+
+  --gap-overall-title-score: 1.5em;
+  --gap-overall-score-label: 1rem;
+  --gap-overall-label-description: 1rem; 
+
+  --gap-overall-summary: 2rem;
+
+  --gap-summary-title-cards: 1rem;
+  --gap-summary-cards: 1rem;
+
+  --gap-summary-cta: 1.5rem;
+  --gap-cta-footer: 2rem;
+}
+
+/* Font Sizes, 16, 18, 24, 32, 56, 72 */
+
+html {
+  --fs-mobile-base: 1rem;
+  --fs-pc-base: 1.125rem;
+  --fs-small: 1.5rem;
+  --fs-medium: 2rem;
+  --fs-mobile-largest: 3.5rem;
+  --fs-pc-largest: 4.5rem;
+}
+
+/* Font Weights, 500, 700, 800 */
+
+html {
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+}
+
+
+
+
+
+
+
+
+
+
+/* General */
+
+html {
+  font-family: 'Hanken Grotesk', sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h2, 
+dl, 
+dt, 
+dd {
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Classes */
+
+/* Class References 
+
+.performance
+
+  .overall
+    .overall__title
+    .overall__score
+    .overall__label
+    .overall__description
+
+  .summary
+    .summary__title
+    .summary__card
+      .summary__label
+      .summary__score
+
+  .cta  
+  
+*/
+
+.performance {
+  background-color: var(--performance-bg-color);
+}
+
+.overall {
+  background-image: var(--primary-color);
+  color: var(--overall-text-color);
+  padding: 2rem 2rem 2rem 2rem;
+  text-align: center;
+  border-radius: 0 0 2rem 2rem;
+  margin: 0 0 var(--gap-overall-summary) 0;
+}
+
+.overall__title {
+  font-size: var(--fs-mobile-base);
+  margin: 0 0 var(--gap-overall-title-score) 0;
+}
+
+.overall__score {
+  background-image: var(--overall-score-bg);
+  display: inline-block;
+  padding: 2rem 3rem;
+  border-radius: 50%;
+  margin: 0 0 var(--gap-overall-score-label) 0;
+}
+
+.overall__score::first-line {
+  font-size: var(--fs-mobile-largest);
+}
+
+.overall__label {
+  font-size: var(--fs-medium);
+  margin: 0 0 var(--gap-overall-label-description) 0;
+}
+
+/* .overall__description {
+
+} */
+
+.summary {
+  color: var(--secondary-color);
+  margin: 0 var(--global-margin) var(--gap-summary-cta) var(--global-margin);
+}
+
+.summary__title {
+  font-size: var(--fs-mobile-base);
+  margin: 0 0 var(--gap-summary-title-cards) 0;
+}
+
+.summary__card {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.summary__card:nth-of-type(1) {
+  background-color: var(--summary-1-bg-color);
+  color: var(--summary-label-1-text-color);
+  margin: 0 0 var(--gap-summary-cards) 0;
+}
+
+.summary__card:nth-of-type(2) {
+  background-color: var(--summary-2-bg-color);
+  color: var(--summary-label-2-text-color);
+  margin: 0 0 var(--gap-summary-cards) 0;
+}
+
+.summary__card:nth-of-type(3) {
+  background-color: var(--summary-3-bg-color);
+  color: var(--summary-label-3-text-color);
+  margin: 0 0 var(--gap-summary-cards) 0;
+}
+
+.summary__card:nth-of-type(4) {
+  background-color: var(--summary-4-bg-color);
+  color: var(--summary-label-4-text-color);
+}
+
+/* .summary__label {
+
+} */
+
+/* .summary__score {
+
+} */
+
+.cta {
+  background-color: var(--secondary-color);
+  color: hsl(0, 0%, 100%);
+  display: block;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 0 var(--global-margin) var(--gap-cta-footer) var(--global-margin);
+  text-align: center;
+  text-decoration: none;
+}
+
+.attribution {
+  background-color: var(--summary-4-bg-color);
+  color: var(--secondary-color);
+  padding: 2rem 3rem;
+  text-align: center; 
+}
+
+.attribution a { 
+  color: var(--summary-label-4-text-color);
+}
+
+
+
+
+
+
+
+
+
+
+/* Helpers */
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.overall--text-accent-color {
+  color: var(--overall-text-accent-color);
+}
+
+.bold {
+  font-weight: var(--fw-bold);
+}
+
+.extra-bold {
+  font-weight: var(--fw-extra-bold);
+}

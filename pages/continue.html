@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    html {
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    body {
+      background-color: hsl(223, 30%, 27%);
+      color: hsl(241, 100%, 89%);
+    }
+
+    div {
+      margin: 8rem auto;
+      max-width: calc(0.8 * 320px);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 800;
+    }
+
+    p {
+      font-weight: 500;
+    }
+
+    a {
+      background-color: hsl(241, 100%, 89%);
+      color: hsl(223, 30%, 27%);
+      display: block;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      margin: 0 0 0 0;
+    }
+
+    .bounce {
+      background-color: hsl(241, 100%, 89%);
+      animation: bounce 2s infinite;
+
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-1rem);}
+      60% {transform: translateY(-0.5rem);}
+    }
+  </style>
+  <title>Frontend Mentor | Results summary component</title>
+</head>
+<body>
+  <div>
+    <h1>Sorry :&lt;</h1>
+    <p>
+      Because there's nothing meaningful here. I'm very sorry.
+    </p>
+    <div>
+      <a class="bounce" href="../index.html">Go back</a>
+    </div>
+  </div>
+</body>
+</html>
